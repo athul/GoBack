@@ -25,4 +25,15 @@ jobs:
         fi
 
     - name: Build
-      run: go build -v .
+      run: |
+        go build -v .
+        ls -a
+      
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: |
+            GoBack
+      env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

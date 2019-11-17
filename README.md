@@ -1,6 +1,6 @@
 # GoBack
-Learning Go by Building Servers 😁
-
+Learning Go by Building Servers 😁   
+[![](https://github.com/athul/GoBack/workflows/Go/badge.svg)](https://github.com/athul/GoBack/actions)
 -----
 
 Basically a `main.go` file with some functionalities in `/ping` and `/wubba` (as of now 😅 )

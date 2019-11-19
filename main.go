@@ -19,12 +19,12 @@ func main() {
 		})
 	})
 	api := r.Group("/api")
-	api.POST("/names/:nameID", nameAPI)
+	api.POST("/names/:ID", nameAPI)
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
 
 type name struct {
-	ID   int    `json:"id" binding:"required"`
+	ID   uint   `json:"id" binding:"required"`
 	Name string `json:"name" binding:"required"`
 }
 
